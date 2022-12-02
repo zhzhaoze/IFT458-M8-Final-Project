@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,300i,700"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <title>User | Enter new User</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav nav--courses">
+        <a href="/courses.html" class="nav__el">All courses</a>
+        <form class="nav__search">
+          <button class="nav__search-btn">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-search"></use>
+            </svg>
+          </button>
+          <input
+            type="text"
+            placeholder="Search courses"
+            class="nav__search-input"
+          />
+        </form>
+      </nav>
+      <div class="header__logo">
+        <img src="img/logo.png" alt="Course logo" />
+      </div>
+      <nav class="nav nav--user">
+        <a href="#" class="nav__el">My Courses</a>
+        <button class="nav__el">Log out</button>
+        <a href="#" class="nav__el">
+          <img src="img/user.png" alt="User photo" class="nav__user-img" />
+          <span>Student
+          </span>
+        </a>
+      </nav>
+    </header>
+
+    <!-- <section class="overview"> -->
+    <main class="main">
+      <div class="card-container">
+        <div class="card">
+          <div class="card__header">
+            
+
+            <h3 class="heading-tertirary">
+              <span>Sign In</span>
+            </h3>
+          </div>
+
+          <div class="card__details">
+            <h4 class="card__sub-heading">New Student </h4>
+            <p class="card__text">
+              Please enter the following Details
+            </p>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-map-pin"></use>
+              </svg>
+             
+              <form action="/login">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <label for="cpassword">Confirm Password:</label>
+                <input type="password" id="cpassword" name="cpassword"><br><br>
+                <input  class="card__sub-heading" type="submit" value="Submit">
+              </form>
+            </div>
+            
+
+          
+        </div>
+
+        
+        </div>
+      </div>
+    </main>
+
+    <div class="footer">
+      <div class="footer__logo">
+        <img src="img/logo.png" alt="Course logo" />
+      </div>
+      <ul class="footer__nav">
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Download Course information</a></li>
+        <li><a href="#">Become a Student</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <p class="footer__copyright">
+        &copy; by Student Learners.
+      </p>
+    </div>
+  </body>
+</html>

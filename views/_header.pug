@@ -1,0 +1,23 @@
+header.header
+    nav.nav.nav--course
+        if name
+            a.nav__el(href='/alluserlists') All userlists
+            a.nav__el(href='/allloanlists') All loanlists
+            a.nav__el(href='/myloanlists') My loanLists
+            a.nav__el(href='/newloan') create new loan
+        form.nav__search
+            //- button.nav__search-btn
+            //-     svg
+            //-         use(xlink:href='img/users/icons.svg#icon-search')
+            //- input(type='text' placeholder='Search courses')
+    .header__logo
+        img(src='/img/logo.png' alt='Course logo')
+    nav.nav.nav--user
+        if name 
+            a.nav__el.nav__el(href='/logout') Log out
+        if !name
+            a.nav__el.nav__el(href='/login') Login
+            a.nav__el.nav__el(href='/signup') Sign Up
+        a.nav__el(href='/')
+            img.nav__user-img(src='/img/users/user.png' alt='user phpto')
+            | #{name}

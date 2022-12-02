@@ -1,0 +1,84 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(href='https://fonts.googleapis.com/css?family=Lato:300,300i,700' rel='stylesheet')
+  link(rel='stylesheet' href='css/style.css')
+  link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+  title User | Enter new User
+header.header
+  nav.nav.nav--courses
+    //- a.nav__el(href='/courses.html') All courses
+    //- form.nav__search
+    //-   button.nav__search-btn
+    //-     svg
+    //-       use(xlink:href='img/icons.svg#icon-search')
+    //-   input.nav__search-input(type='text' placeholder='Search courses')
+  .header__logo
+    img(src='img/logo.png' alt='Course logo')
+  nav.nav.nav--user
+    a.nav__el.nav__el(href='/login') Login
+    //- a.nav__el(href='#') My Courses
+    //- button.nav__el Log out
+    a.nav__el(href='#')
+      img.nav__user-img(src='/img/users/user.png' alt='user phpto')
+      span
+        | Student
+// <section class="overview">
+main.main
+  .card-container
+    .card
+      .card__header
+        h3.heading-tertirary
+          span Sign Up
+      .card__details
+        h4.card__sub-heading New Student 
+        p.card__text
+          | Please enter the following Details
+        .card__data
+          svg.card__icon
+            use(xlink:href='img/icons.svg#icon-map-pin')
+          form(action='/api/v1/users/signup' method='post')
+            label(for='name') Name:
+            input#name(type='text' name='name')
+            br
+            br
+            label(for='email') Email:
+            input#email(type='email' name='email')
+            br
+            br
+            //- .col-xs-12
+            label(for='role') Role:
+            select#role.select.form-control.input-lg(name='role')
+              option(value='user') User
+              option(value='staff') Staff
+              option(value='student') Student
+              option(value='admin') Admin
+            br
+            br
+            label(for='password') Password:
+            input#password(type='password' name='password')
+            br
+            br
+            label(for='cpassword') Confirm Password:
+            input#cpassword(type='password' name='cpassword')
+            br
+            br
+            input.card__sub-heading(type='submit' value='Submit')
+.footer
+  .footer__logo
+    img(src='img/logo.png' alt='Course logo')
+  ul.footer__nav
+    li
+      a(href='#') About us
+    li
+      a(href='#') Download Course information
+    li
+      a(href='#') Become a Student
+    li
+      a(href='#') Careers
+    li
+      a(href='#') Contact
+  p.footer__copyright
+    | &copy; by Student Learners.
+

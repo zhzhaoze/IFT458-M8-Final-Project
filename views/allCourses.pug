@@ -1,0 +1,22 @@
+extends baseTemplate
+
+block content 
+  h1 This is dynamic course Overview
+  div
+    table.table-header
+      thead
+        tr
+          th(scope='ID') #
+          th(scope='col') Course Name
+          th(scope='col') Instructor
+          th(scope='col') Credits
+          th(scope='col') Majors
+      tbody
+        each course in courses 
+          tr.table-secondary
+            td=course.id
+            td=course.courseName
+            td=course.instructor
+            td=course.credits
+            td=course.from
+ 

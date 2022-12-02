@@ -1,0 +1,26 @@
+extends baseTemplate
+
+block content 
+  h1 This is dynamic course Overview
+  <div class="">
+    <table class="table-header">
+      <thead>
+        <tr>
+          <th scope="ID">#</th>
+          <th scope="col">Course Name</th>
+          <th scope="col">Instructor</th>
+          <th scope="col">Credits</th>
+          <th scope="col">Majors</th>
+        </tr>
+      </thead>
+      <tbody>
+        each course in courses 
+          <tr class="table-secondary">
+            <td>#{course.id}</th>
+            <td>#{course.courseName}</td>
+            <td>#{course.instructor}</td>
+            <td>#{course.credits}</td>
+            <td>#{course.from}</td>
+          </tr>
+      </tbody>
+    </table>
